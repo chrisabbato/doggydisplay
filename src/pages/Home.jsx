@@ -52,6 +52,12 @@ function Home() {
     };
   }, []);
 
+  const userMessage = isError
+    ? "Error loading breeds"
+    : isLoading
+    ? "Loading..."
+    : "";
+
   return (
     <ContentArea>
       <h1>Choose a Breed</h1>
@@ -59,8 +65,8 @@ function Home() {
         searchVal={searchVal}
         updateSearch={updateSearch}
       ></DisplayBreedSearchInput>
-      {isLoading ? (
-        "Loading..."
+      {isLoading || isError ? (
+        userMessage
       ) : (
         <DisplayBreeds searchVal={searchVal} breeds={breeds}></DisplayBreeds>
       )}
