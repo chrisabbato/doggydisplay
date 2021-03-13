@@ -6,10 +6,12 @@ const styles = {
     display: "grid",
     height: "100vh",
     gridTemplateRows: "100px auto",
+    minWidth: "400px",
   },
   main: {
     backgroundColor: "#DDD",
     padding: "20px",
+    overflow: "auto",
   },
 };
 
