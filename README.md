@@ -10,6 +10,6 @@ Everyone loves cute dog pictures, get your fill here!
 
 - Support for suspense/placeholder when loading the images
 - State machine to handle the loading/error/display state of components using [XState](https://xstate.js.org/)
-- Better error handling
+- Better error handling / messaging around the data fetching
 - A fetch wrapper (perhaps axios instead)
-- Proper testing
+- Proper testing (not a huge strength at the moment, but eager to learn and implement)
