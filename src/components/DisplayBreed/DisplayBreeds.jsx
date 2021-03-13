@@ -1,12 +1,6 @@
 import { Link } from "@reach/router";
 import React from "react";
 
-const styles = {
-  link: {
-    textTransform: "capitalize",
-  },
-};
-
 function DisplayBreeds({ searchVal, breeds }) {
   return (
     <ul>
@@ -15,8 +9,8 @@ function DisplayBreeds({ searchVal, breeds }) {
           breed.toLowerCase().includes(searchVal.toLowerCase())
         )
         .map((breed) => (
-          <li>
-            <Link style={styles.link} to={`/dog/${breed}`} key={breed}>
+          <li key={breed}>
+            <Link style={{ textTransform: "capitalize" }} to={`/dog/${breed}`}>
               {breed}
             </Link>
           </li>

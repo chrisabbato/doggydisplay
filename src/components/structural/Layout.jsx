@@ -6,7 +6,7 @@ const styles = {
     display: "grid",
     height: "100vh",
     gridTemplateRows: "100px auto",
-    minWidth: "400px",
+    minWidth: "320px",
   },
   main: {
     backgroundColor: "#DDD",

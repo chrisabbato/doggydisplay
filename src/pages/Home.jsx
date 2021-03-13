@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import DisplayBreeds from "../components/DisplayBreed/DisplayBreeds";
-import DisplayBreedSearchInput from "../components/DisplayBreed/DisplayBreedSearch";
-import {} from "../helpers/fetchWrapper";
+import DisplayBreedSearchInput from "../components/DisplayBreed/BreedSearchInput";
+import styled from "styled-components";
+
+const ContentArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 function Home() {
   const [breeds, setBreeds] = useState([]);
@@ -20,20 +26,19 @@ function Home() {
       try {
         setIsError(false);
         setIsLoading(true);
+
         const request = `${process.env.REACT_APP_DOG_API_URL}/breeds/list/all`;
         const response = await fetch(request, {
           signal: abortController.signal,
         });
+
         const data = await response.json();
-
         const breeds = Array.from(Object.keys(data.message));
-
         setBreeds(breeds);
       } catch (error) {
         if (!abortController.signal.aborted) {
           setIsError(true);
           console.log("Error: " + error);
-          console.log("Retrying...");
         }
       } finally {
         setIsLoading(false);
@@ -45,10 +50,10 @@ function Home() {
     return () => {
       abortController.abort();
     };
-  }, [isError]);
+  }, []);
 
   return (
-    <div>
+    <ContentArea>
       <h1>Find a Breed</h1>
       <DisplayBreedSearchInput
         searchVal={searchVal}
@@ -59,7 +64,7 @@ function Home() {
       ) : (
         <DisplayBreeds searchVal={searchVal} breeds={breeds}></DisplayBreeds>
       )}
-    </div>
+    </ContentArea>
   );
 }
 
