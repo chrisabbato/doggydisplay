@@ -13,6 +13,7 @@ const StyledBreed = styled.li`
   padding: 10px;
   margin: 10px;
   background-color: #eee;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 `;
 

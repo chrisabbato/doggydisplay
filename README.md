@@ -32,3 +32,4 @@ Furthermore, on the idea of freedom of design, the value of design/development c
 - Proper testing (not my strength at the moment, but eager to learn and implement)
 - Better type support (Typescript or more advanced PropType declarations)
 - Add a small picture next to breed selection in case the user doesn't know what they look like
+- Media queries around image constraints to allow larger images for bigger screens
