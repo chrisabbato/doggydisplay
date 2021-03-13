@@ -12,7 +12,7 @@ const StyledTitle = styled.h1`
 function Title() {
   return (
     <StyledTitle>
-      <Link to="/">Doggy Display</Link>
+      <Link to="/">{String.fromCodePoint(0x1f415)} Doggy Display</Link>
     </StyledTitle>
   );
 }
