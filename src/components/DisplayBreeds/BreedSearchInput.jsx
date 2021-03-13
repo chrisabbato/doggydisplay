@@ -13,6 +13,7 @@ function BreedSearchInput({ searchVal, updateSearch }) {
       type="text"
       value={searchVal}
       onChange={(e) => updateSearch(e.target.value)}
+      autoFocus
     ></StyledInput>
   );
 }
