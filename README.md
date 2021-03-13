@@ -25,7 +25,7 @@ I continue to struggle with perfectionism. Striving for excellence is one of my 
 - Responsive design built in without relying on media queries
 - Smooth ease of use. Autofocus input on load, quick filtering, quick tab + enter KB flow to jump to random view, and back link to return
 - Minimal reliance on external libraries
-  - It's so easy and tempting to just npm install everything right away but I minimize my reliance on that for this challenge
+  - It's so easy and tempting to just npm install a pre built option, and for many use cases that is the ideal solution but I wanted minimize my reliance on that for this challenge
 
 ## Areas of Improvements
 
@@ -34,5 +34,8 @@ I continue to struggle with perfectionism. Striving for excellence is one of my 
   - State machine to handle the loading/error/display state of components using [XState](https://xstate.js.org/)
 - Proper testing (not my strength at the moment, but eager to learn and implement)
 - Better type support (Typescript or more advanced PropType declarations)
-- Add a small picture next to breed selection in case the user doesn't know what they look like
+- Improvements to breed selection
+  - Add a small picture as part to breed selection in case the user doesn't know what they look like
+  - Conver breed selection to a DDL if more functionality is desired
 - Media queries around image constraints to allow larger images for bigger screens
+- Design system/ui component library for consistent branding/layouts, etc. I'm partial to TailwindCSS myself.
