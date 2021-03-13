@@ -17,8 +17,11 @@ This is something I've been wrestling with lately in the pursuit of the best, mo
 
 Furthermore, on the idea of freedom of design, the value of design/development constraints in a team is made ever more evident when wrestling with these topics (including CSS approach)
 
+I continue to struggle with perfectionism. Striving for excellence is one of my biggest strengths but it's a double-edged sword. Too high of expectations and nothing is ever good enough, but too low and potential will never be reached. I find it hard to be satisfied with what I have created because I am so aware of the multitude of ways to improve it.
+
 ## Things I'm proud of
 
+- Getting to an acceptable place of good enough, and letting go of the need to keep improving on it.
 - Responsive design built in without relying on media queries
 - Smooth ease of use. Autofocus input on load, quick filtering, quick tab + enter KB flow to jump to random view, and back link to return
 - Minimal reliance on external libraries
