@@ -11,11 +11,15 @@ const ImagesContainer = styled.div`
   place-content: center;
 `;
 
-function DisplayImagesLayout({ urls }) {
+function DisplayImagesLayout({ images }) {
   return (
     <ImagesContainer>
-      {urls.map((url, index) => (
-        <DisplayImages url={url} key={index}></DisplayImages>
+      {images.map((image, index) => (
+        <DisplayImages
+          key={index}
+          url={image.url}
+          alt={image.alt}
+        ></DisplayImages>
       ))}
     </ImagesContainer>
   );
@@ -24,5 +28,10 @@ function DisplayImagesLayout({ urls }) {
 export default DisplayImagesLayout;
 
 DisplayImagesLayout.propTypes = {
-  urls: PropTypes.array.isRequired,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+    })
+  ),
 };

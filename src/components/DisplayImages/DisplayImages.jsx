@@ -9,12 +9,13 @@ const StyledDisplayImages = styled.img`
   min-height: 150px;
 `;
 
-function DisplayImages({ url }) {
-  return <StyledDisplayImages src={url}></StyledDisplayImages>;
+function DisplayImages({ url, alt }) {
+  return <StyledDisplayImages src={url} alt={alt}></StyledDisplayImages>;
 }
 
 export default DisplayImages;
 
 DisplayImages.propTypes = {
   url: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 };
