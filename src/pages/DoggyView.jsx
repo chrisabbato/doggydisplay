@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import DisplayDoggy from "../components/DisplayDoggy/DisplayDoggy";
 
 const numberOfPictures = 4;
 
-const styles = {
-  doggyGrid: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gridTemplateRows: "1fr 1fr",
-    gap: "20px",
-    placeItems: "center",
-  },
-  doggyImage: {
-    objectFit: "contain",
-    width: "100%",
-    maxHeight: "300px",
-  },
-};
+const DoggyGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  place-items: center;
+`;
 
 function DoggyView({ breed }) {
-  const [isError, setIsError] = useState(false);
   const [pictureURLs, setPictureURLs] = useState([]);
 
   useEffect(() => {
@@ -26,19 +19,16 @@ function DoggyView({ breed }) {
 
     async function fetchPictures() {
       try {
-        setIsError(false);
         const request = `${process.env.REACT_APP_DOG_API_URL}/breed/${breed}/images/random/${numberOfPictures}`;
         const response = await fetch(request, {
           signal: abortController.signal,
         });
-        const data = await response.json();
 
+        const data = await response.json();
         setPictureURLs(data.message);
       } catch (error) {
         if (!abortController.signal.aborted) {
-          setIsError(true);
           console.log("Error: " + error);
-          console.log("Retrying...");
         }
       } finally {
       }
@@ -49,14 +39,14 @@ function DoggyView({ breed }) {
     return () => {
       abortController.abort();
     };
-  }, [breed, isError]);
+  }, [breed]);
 
   return (
-    <div style={styles.doggyGrid}>
+    <DoggyGrid>
       {pictureURLs.map((url, index) => (
-        <img key={index} style={styles.doggyImage} src={url} alt="Doggy"></img>
+        <DisplayDoggy url={url} key={index}></DisplayDoggy>
       ))}
-    </div>
+    </DoggyGrid>
   );
 }
 
