@@ -1,19 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 import Title from "./Title";
 
-const styles = {
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
-    backgroundColor: "#666",
-  },
-};
+const StyledHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+  background-color: #666;
+`;
 
 function Header({ pages }) {
   return (
-    <header style={styles.header}>
+    <StyledHeader>
       <Title></Title>
-    </header>
+    </StyledHeader>
   );
 }
 

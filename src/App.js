@@ -1,14 +1,14 @@
 import { Router } from "@reach/router";
 import Layout from "./components/structural/Layout";
 import Home from "./pages/Home";
-import DoggyView from "./pages/DoggyView";
+import Doggos from "./pages/Doggos";
 
 function App() {
   return (
     <Layout>
       <Router>
         <Home path="/" />
-        <DoggyView path="/dog/:breed" />
+        <Doggos path="/dog/:breed" />
       </Router>
     </Layout>
   );

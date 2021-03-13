@@ -1,26 +1,25 @@
 import React from "react";
+import styled from "styled-components";
 import Header from "./Header";
 
-const styles = {
-  layout: {
-    display: "grid",
-    height: "100vh",
-    gridTemplateRows: "100px auto",
-    minWidth: "320px",
-  },
-  main: {
-    backgroundColor: "#DDD",
-    padding: "20px",
-    overflow: "auto",
-  },
-};
+const StyledLayout = styled.div`
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 100px auto;
+  min-width: 320px;
+`;
+const Main = styled.main`
+  background-color: #ddd;
+  padding: 20px;
+  overflow: auto;
+`;
 
 function Layout({ pages, children }) {
   return (
-    <div style={styles.layout}>
+    <StyledLayout>
       <Header pages={pages}></Header>
-      <main style={styles.main}>{children}</main>
-    </div>
+      <Main>{children}</Main>
+    </StyledLayout>
   );
 }
 

@@ -1,9 +1,14 @@
 import { Link } from "@reach/router";
 import React from "react";
+import styled from "styled-components";
+
+const StyledList = styled.ul`
+  columns: 4;
+`;
 
 function DisplayBreeds({ searchVal, breeds }) {
   return (
-    <ul>
+    <StyledList>
       {breeds
         .filter((breed) =>
           breed.toLowerCase().includes(searchVal.toLowerCase())
@@ -15,7 +20,7 @@ function DisplayBreeds({ searchVal, breeds }) {
             </Link>
           </li>
         ))}
-    </ul>
+    </StyledList>
   );
 }
 

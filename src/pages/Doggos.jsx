@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import DisplayDoggy from "../components/DisplayDoggy/DisplayDoggy";
+import DisplayDoggyGrid from "../components/DisplayDoggy/DisplayDoggyGrid";
+import { Link } from "@reach/router";
 
 const numberOfPictures = 4;
 
-const DoggyGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  place-items: center;
-`;
-
-function DoggyView({ breed }) {
+function Doggos({ breed }) {
   const [pictureURLs, setPictureURLs] = useState([]);
 
   useEffect(() => {
@@ -42,12 +35,11 @@ function DoggyView({ breed }) {
   }, [breed]);
 
   return (
-    <DoggyGrid>
-      {pictureURLs.map((url, index) => (
-        <DisplayDoggy url={url} key={index}></DisplayDoggy>
-      ))}
-    </DoggyGrid>
+    <div>
+      <Link to="/">&larr; Return</Link>
+      <DisplayDoggyGrid urls={pictureURLs}></DisplayDoggyGrid>
+    </div>
   );
 }
 
-export default DoggyView;
+export default Doggos;
