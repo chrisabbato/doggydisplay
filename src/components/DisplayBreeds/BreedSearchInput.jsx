@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledInput = styled.input`
   padding: 10px;
   margin-bottom: 10px;
+  border-radius: 5px;
 `;
 
 function BreedSearchInput({ searchVal, updateSearch }) {

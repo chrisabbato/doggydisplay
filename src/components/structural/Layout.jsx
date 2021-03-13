@@ -9,16 +9,22 @@ const StyledLayout = styled.div`
   min-width: 320px;
 `;
 const Main = styled.main`
-  background-color: #ddd;
   padding: 20px;
   overflow: auto;
+`;
+
+const Content = styled.div`
+  max-width: 1280px;
+  margin: 0 auto;
 `;
 
 function Layout({ pages, children }) {
   return (
     <StyledLayout>
       <Header pages={pages}></Header>
-      <Main>{children}</Main>
+      <Main>
+        <Content>{children}</Content>
+      </Main>
     </StyledLayout>
   );
 }

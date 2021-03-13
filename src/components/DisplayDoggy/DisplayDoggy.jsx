@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 const StyledDisplayDoggy = styled.img`
   object-fit: contain;
-  width: 100%;
+  max-width: 300px;
   max-height: 400px;
+  min-height: 150px;
 `;
 
 function DisplayDoggy({ url }) {

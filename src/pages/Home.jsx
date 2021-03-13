@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import DisplayBreeds from "../components/DisplayBreed/DisplayBreeds";
-import DisplayBreedSearchInput from "../components/DisplayBreed/BreedSearchInput";
+import DisplayBreeds from "../components/DisplayBreeds/DisplayBreeds";
+import DisplayBreedSearchInput from "../components/DisplayBreeds/BreedSearchInput";
 import styled from "styled-components";
 
 const ContentArea = styled.div`
@@ -54,7 +54,7 @@ function Home() {
 
   return (
     <ContentArea>
-      <h1>Find a Breed</h1>
+      <h1>Choose a Breed</h1>
       <DisplayBreedSearchInput
         searchVal={searchVal}
         updateSearch={updateSearch}

@@ -4,6 +4,7 @@ import Title from "./Title";
 
 const StyledHeader = styled.header`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: #666;
 `;

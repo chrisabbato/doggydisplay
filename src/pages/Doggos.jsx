@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import DisplayDoggyGrid from "../components/DisplayDoggy/DisplayDoggyGrid";
-import { Link } from "@reach/router";
+import DisplayDoggyLayout from "../components/DisplayDoggy/DisplayDoggyLayout";
+import DisplayDoggyHeader from "../components/DisplayDoggy/DisplayDoggyHeader";
 
 const numberOfPictures = 4;
 
@@ -36,8 +36,8 @@ function Doggos({ breed }) {
 
   return (
     <div>
-      <Link to="/">&larr; Return</Link>
-      <DisplayDoggyGrid urls={pictureURLs}></DisplayDoggyGrid>
+      <DisplayDoggyHeader breed={breed}></DisplayDoggyHeader>
+      <DisplayDoggyLayout urls={pictureURLs}></DisplayDoggyLayout>
     </div>
   );
 }

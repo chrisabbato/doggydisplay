@@ -9,6 +9,7 @@ Everyone loves cute dog pictures, get your fill here!
 ## Things I'd like to add
 
 - Support for suspense/placeholder when loading the images
-- Media queries for a mobile first approach
 - State machine to handle the loading/error/display state of components using [XState](https://xstate.js.org/)
+- Better error handling
 - A fetch wrapper (perhaps axios instead)
+- Proper testing

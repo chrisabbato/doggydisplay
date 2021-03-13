@@ -3,13 +3,14 @@ import styled from "styled-components";
 import DisplayDoggy from "./DisplayDoggy";
 
 const DoggyGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-flow: row wrap;
   gap: 20px;
-  place-items: center;
+  align-content: stretch;
+  place-content: center;
 `;
 
-function DisplayDoggyGrid({ urls }) {
+function DisplayDoggyLayout({ urls }) {
   return (
     <DoggyGrid>
       {urls.map((url, index) => (
@@ -19,4 +20,4 @@ function DisplayDoggyGrid({ urls }) {
   );
 }
 
-export default DisplayDoggyGrid;
+export default DisplayDoggyLayout;
