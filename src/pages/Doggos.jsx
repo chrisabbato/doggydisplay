@@ -46,6 +46,5 @@ function Doggos({ breed }) {
 export default Doggos;
 
 Doggos.propTypes = {
-  searchVal: PropTypes.string.isRequired,
-  breeds: PropTypes.string.isRequired,
+  breed: PropTypes.string,
 };

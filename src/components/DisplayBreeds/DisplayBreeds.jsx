@@ -24,8 +24,12 @@ function DisplayBreeds({ searchVal, breeds }) {
           breed.toLowerCase().includes(searchVal.toLowerCase())
         )
         .map((breed) => (
-          <Link style={{ textTransform: "capitalize" }} to={`/dog/${breed}`}>
-            <StyledBreed key={breed}>{breed}</StyledBreed>
+          <Link
+            key={breed}
+            style={{ textTransform: "capitalize" }}
+            to={`/dog/${breed}`}
+          >
+            <StyledBreed>{breed}</StyledBreed>
           </Link>
         ))}
     </StyledList>
@@ -35,6 +39,6 @@ function DisplayBreeds({ searchVal, breeds }) {
 export default DisplayBreeds;
 
 DisplayBreeds.propTypes = {
-  searchVal: PropTypes.string.isRequired,
-  breeds: PropTypes.string.isRequired,
+  searchVal: PropTypes.string,
+  breeds: PropTypes.array.isRequired,
 };

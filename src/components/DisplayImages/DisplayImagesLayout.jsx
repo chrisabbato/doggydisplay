@@ -24,5 +24,5 @@ function DisplayImagesLayout({ urls }) {
 export default DisplayImagesLayout;
 
 DisplayImagesLayout.propTypes = {
-  urls: PropTypes.string.isRequired,
+  urls: PropTypes.array.isRequired,
 };
