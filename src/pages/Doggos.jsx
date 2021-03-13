@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import DisplayDoggyLayout from "../components/DisplayDoggy/DisplayDoggyLayout";
-import DisplayDoggyHeader from "../components/DisplayDoggy/DisplayDoggyHeader";
+import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
+import DisplayImagesHeader from "../components/DisplayImages/DisplayImagesHeader";
+import DisplayImagesLayout from "../components/DisplayImages/DisplayImagesLayout";
 
 const numberOfPictures = 4;
 
@@ -36,10 +37,15 @@ function Doggos({ breed }) {
 
   return (
     <div>
-      <DisplayDoggyHeader breed={breed}></DisplayDoggyHeader>
-      <DisplayDoggyLayout urls={pictureURLs}></DisplayDoggyLayout>
+      <DisplayImagesHeader imagesCategory={breed}></DisplayImagesHeader>
+      <DisplayImagesLayout urls={pictureURLs}></DisplayImagesLayout>
     </div>
   );
 }
 
 export default Doggos;
+
+Doggos.propTypes = {
+  searchVal: PropTypes.string.isRequired,
+  breeds: PropTypes.string.isRequired,
+};

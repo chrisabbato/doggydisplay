@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,7 +8,7 @@ const StyledInput = styled.input`
   border-radius: 5px;
 `;
 
-function BreedSearchInput({ searchVal, updateSearch }) {
+function SearchInput({ searchVal, updateSearch }) {
   return (
     <StyledInput
       type="text"
@@ -18,4 +19,9 @@ function BreedSearchInput({ searchVal, updateSearch }) {
   );
 }
 
-export default BreedSearchInput;
+export default SearchInput;
+
+SearchInput.propTypes = {
+  searchVal: PropTypes.string.isRequired,
+  updateSearch: PropTypes.func.isRequired,
+};

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import DisplayBreeds from "../components/DisplayBreeds/DisplayBreeds";
-import DisplayBreedSearchInput from "../components/DisplayBreeds/BreedSearchInput";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import DisplayBreedSearchInput from "../components/core/SearchInput";
+import DisplayBreeds from "../components/DisplayBreeds/DisplayBreeds";
 
 const ContentArea = styled.div`
   display: flex;

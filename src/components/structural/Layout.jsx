@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
@@ -18,10 +19,10 @@ const Content = styled.div`
   margin: 0 auto;
 `;
 
-function Layout({ pages, children }) {
+function Layout({ children }) {
   return (
     <StyledLayout>
-      <Header pages={pages}></Header>
+      <Header></Header>
       <Main>
         <Content>{children}</Content>
       </Main>
@@ -30,3 +31,7 @@ function Layout({ pages, children }) {
 }
 
 export default Layout;
+
+Layout.propTypes = {
+  children: PropTypes.node,
+};

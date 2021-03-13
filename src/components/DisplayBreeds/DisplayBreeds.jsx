@@ -1,4 +1,5 @@
 import { Link } from "@reach/router";
+import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
@@ -32,3 +33,8 @@ function DisplayBreeds({ searchVal, breeds }) {
 }
 
 export default DisplayBreeds;
+
+DisplayBreeds.propTypes = {
+  searchVal: PropTypes.string.isRequired,
+  breeds: PropTypes.string.isRequired,
+};

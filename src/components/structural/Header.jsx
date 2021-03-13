@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   background-color: #666;
 `;
 
-function Header({ pages }) {
+function Header() {
   return (
     <StyledHeader>
       <Title></Title>
